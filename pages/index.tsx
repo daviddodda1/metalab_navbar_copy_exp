@@ -7,7 +7,7 @@ import { css } from "@emotion/css";
 import bgimage from "../assets/andre-benz-JnB8Gio4GZo-unsplash.jpg"
 
 // import moon and sun icons from react-icons
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun, FaTwitter } from "react-icons/fa";
 import { on } from "events";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -241,7 +241,7 @@ export default function Home() {
             className={css`
           background-image: url(${bgimage.src});
           filter: ${theme === "dark" ? "invert(1)" : "none"};
-          background-size: cover;
+          background-size: auto;
           background-position: center;
           height: 100vh;
           position: relative;
@@ -258,6 +258,8 @@ export default function Home() {
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 0.2rem;
+                      background-size: auto;
+            background-position: center;
           `}
         `}
           ></div>
@@ -283,7 +285,7 @@ export default function Home() {
               background: rgba(0, 0, 0, 0.1);
             }
           `}
-              onMouseEnter={() => setHoverText("👨‍💻 Code conjurer by day, idea alchemist by night. Turning wild ideas into cool projects since '95. Let's build something amazing!")}
+              onMouseEnter={() => setHoverText("👨‍💻 Code conjurer by day, idea alchemist by night. Turning wild ideas into cool projects. Let's build something amazing! <br/> <a href='https://x.com/DavidDodda_'>twitter: @daviddodda_</a>")}
             >
               About
             </div>
@@ -336,8 +338,10 @@ export default function Home() {
             font-size: 2rem;
             color: ${textColor};
           `}
+
+              dangerouslySetInnerHTML={{ __html: hoverText }}
             >
-              {hoverText}
+
             </div>
           </div>
         </div>
