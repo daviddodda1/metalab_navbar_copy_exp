@@ -18,7 +18,7 @@ export default function Home() {
   const [theme, setTheme] = useState("light");
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-  const [hoverText, setHoverText] = useState("Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, tempora repellat natus totam quos illum obcaecati voluptates. Mollitia dicta ipsa debitis adipisci autem est amet, fugit aliquam eius quasi numquam!");
+  const [hoverText, setHoverText] = useState("👨‍💻 Code conjurer by day, idea alchemist by night. Turning wild ideas into cool projects. Let's build something amazing! <br/> <a href='https://x.com/DavidDodda_'>twitter: @daviddodda_</a>");
 
   const [navOpen, setNavOpen] = useState(false);
 
